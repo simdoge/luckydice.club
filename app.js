@@ -1801,7 +1801,7 @@ var FairnessTabContent = React.createClass({
       innerNode = el.div(
         null,
         'This is a test'
-  
+		)
 
     return el.div(
       null,

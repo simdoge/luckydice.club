@@ -1681,7 +1681,7 @@ var Tabs = React.createClass({
             },
             el.span(null, 'Fairness ')
           )
-        )
+        ),
       // Display faucet tab even to guests so that they're aware that
       // this casino has one.
       !config.recaptcha_sitekey ? '' :

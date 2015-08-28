@@ -1784,6 +1784,34 @@ var MyBetsTabContent = React.createClass({
   }
 });
 
+var FairnessTabContent = React.createClass({
+  displayName: 'FairnessTabContent',
+  render: function() {
+
+    // If user is not logged in, let them know only logged-in users can claim
+    if (!worldStore.state.user) {
+      return el.p(
+        {className: 'lead'},
+        'You must login to view this page'
+      );
+    }
+
+    var innerNode;
+    // SHOW_RECAPTCHA | SUCCESSFULLY_CLAIMED | ALREADY_CLAIMED | WAITING_FOR_SERVER
+      innerNode = el.div(
+        null,
+        'This is a test'
+  
+
+    return el.div(
+      null,
+      innerNode
+    );
+  }
+});
+
+
+
 var FaucetTabContent = React.createClass({
   displayName: 'FaucetTabContent',
   getInitialState: function() {

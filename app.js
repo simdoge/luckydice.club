@@ -1669,6 +1669,19 @@ var Tabs = React.createClass({
             'My Bets'
           )
         ),
+      // Display Fairness tab even to guests so that they're aware that
+      // this casino has one.
+      !config.recaptcha_sitekey ? '' :
+        el.li(
+          {className: worldStore.state.currTab === 'FAIRNESS' ? 'active' : ''},
+          el.a(
+            {
+              href: 'javascript:void(0)',
+              onClick: this._makeTabChangeHandler('FAIRNESS')
+            },
+            el.span(null, 'Fairness ')
+          )
+        )
       // Display faucet tab even to guests so that they're aware that
       // this casino has one.
       !config.recaptcha_sitekey ? '' :
@@ -1682,6 +1695,7 @@ var Tabs = React.createClass({
             el.span(null, 'Faucet ')
           )
         )
+		
     );
   }
 });
@@ -2145,6 +2159,8 @@ var TabContent = React.createClass({
     switch(worldStore.state.currTab) {
       case 'FAUCET':
         return React.createElement(FaucetTabContent, null);
+	  case 'FAIRNESS':
+        return React.createElement(FairnessTabContent, null);
       case 'MY_BETS':
         return React.createElement(MyBetsTabContent, null);
       case 'ALL_BETS':

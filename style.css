@@ -1,7 +1,5 @@
 body {
     margin-top: 20px;
-    background-color: #14141F;
-    color: #CACAD4;
 }
 
 .navbar .navbar-brand {
@@ -9,41 +7,20 @@ body {
 }
 .navbar .brand-name:hover {
     text-decoration: underline;
-    /* color: #000000; */
-}
-
-/* BetBox */
-.lead {
-    color: #000000;
-}
-.mbb {
-    background-color: #A8A8A9;
 }
 
 /* ChatBox */
+
 .chat-list {
     overflow-y: scroll;
     height: 215px;
     word-wrap: break-word;
-    color: #000000;
-}
-.mcb {
-    background-color: #A8A8A9;
-}
-.cul {
-    color: #000000;
 }
 
 .chat-list li {
     /* Since .focus() is used to scroll to last message item,
        turn off the outline that appears by default */
     outline: none;
-    color: #000000;
-}
-
-/* ChatUserList */
-.cul {
-    color: #000000;
 }
 
 /* Animation */
